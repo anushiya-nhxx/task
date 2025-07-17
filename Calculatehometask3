@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arithmetic Operations</title>
+</head>
+<body>
+  <h2>Task 3: Arithmetic Operations</h2>
+
+  <label>Enter First Number:</label>
+  <input type="number" id="num1"><br><br>
+
+  <label>Enter Second Number:</label>
+  <input type="number" id="num2"><br><br>
+
+  <button onclick="performOperations()">Calculate</button>
+
+  <h3>Results:</h3>
+  <p id="result"></p>
+
+  <script>
+    function performOperations() {
+      var a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value); 
+      const lineBreak = "<br>"; 
+
+      let addition = a + b;
+      let subtraction = a - b;
+      let multiplication = a * b;
+      let division = (b !== 0) ? (a / b) : "Cannot divide by 0";
+      let modulus = (b !== 0) ? (a % b) : "Cannot use modulus by 0";
+
+      document.getElementById("result").innerHTML =
+        "Addition: " + addition + lineBreak +
+        "Subtraction: " + subtraction + lineBreak +
+        "Multiplication: " + multiplication + lineBreak +
+        "Division: " + division + lineBreak +
+        "Modulus: " + modulus;
+    }
+  </script>
+</body>
+</html>
